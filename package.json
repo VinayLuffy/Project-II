@@ -1,0 +1,14 @@
+{
+  "name": "hate-content-detection",
+  "version": "1.0.0",
+  "description": "A simple node.js web app to detect hate content.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "Vinay Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
