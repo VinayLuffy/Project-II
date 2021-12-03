@@ -14,13 +14,14 @@
     <div class="card">
       <h4>Hate Content Detection</h4>
       <div class="content-container">
-        <small>Enter your Content</small>
         <div class="content">
-          <textarea name="description" width="100%" cols="6"></textarea>
+          <input name="tag" placeholder="Enter the hate tweet topic" type="text" required minlength="3" />
+          <input name="count" placeholder="Enter the hate tweet count" type="number" required maxlength="100" />
         </div>
       </div>
 
       <button type="submit" class="btn">Submit</button>
+      <p class="annotation">&copy; Powered by <span style="color: #55ADEE;">Twitter</span></p>
     </div>
   </form>
 </body>
