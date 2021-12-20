@@ -52,14 +52,6 @@ class TwitterClient(object):
 		else:
 			return 'negative'
 
-	def getUserData(self):
-		f = open("input.txt", "r")
-		q = f.readline()
-		c = f.readline()
-		print(q)
-		print(c)
-		return q, c 
-
 	def get_tweets(self, query, count):
 		'''
 		Main function to fetch tweets and parse them.
@@ -97,15 +89,14 @@ class TwitterClient(object):
 			print("Error : " + str(e))
 
 def main():
-	sys.stdout = open("processed/processed.txt", "w")
 	# creating object of TwitterClient Class
 	api = TwitterClient()
 
-	# Reading User Input
-	query, count = api.getUserData()
+	q = sys.argv[1]
+	c = sys.argv[2]
 
 	# calling function to get tweets
-	tweets = api.get_tweets(query = query, count = count)
+	tweets = api.get_tweets(query = "Narendra Modi", count = 10)
 
 	# picking negative tweets from tweets
 	ntweets = [tweet for tweet in tweets if tweet['sentiment'] == 'negative']
@@ -117,8 +108,6 @@ def main():
 			print(tweet['text'])
 		except tweepy.TweepyException as e:
 			continue
-
-	sys.stdout.close()
 
 
 if __name__ == "__main__":
