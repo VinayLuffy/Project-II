@@ -93,10 +93,9 @@ def main():
 	api = TwitterClient()
 
 	q = sys.argv[1]
-	c = sys.argv[2]
 
 	# calling function to get tweets
-	tweets = api.get_tweets(query = "Narendra Modi", count = 10)
+	tweets = api.get_tweets(query = q, count = 20)
 
 	# picking negative tweets from tweets
 	ntweets = [tweet for tweet in tweets if tweet['sentiment'] == 'negative']

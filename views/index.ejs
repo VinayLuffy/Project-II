@@ -6,20 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css" />
-  <title>HDC</title>
+  <title>HDC - Home</title>
 </head>
 
 <body>
-  <form method="post" action="/detect">
+  <form method="post" action="/result">
     <div class="card">
       <h4>Hate Content Detection</h4>
       <div class="content-container">
         <div class="content">
           <input name="tag" placeholder="Enter the hate tweet topic" type="text" required minlength="3" />
-          <input name="count" placeholder="Enter the hate tweet count" type="number" required maxlength="100" />
         </div>
       </div>
-
       <button type="submit" class="btn">Submit</button>
       <p class="annotation">&copy; Powered by <span style="color: #55ADEE;">Twitter</span></p>
     </div>

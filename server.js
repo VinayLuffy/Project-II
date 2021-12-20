@@ -7,6 +7,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.set("view engine", "ejs");
+
 app.use("/", require("./routes/api"));
 
 const PORT = 5000;

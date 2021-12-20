@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="result.css" />
+  <title>HDC - Results</title>
+  <script>
+    const content = `<%= resultData %>`;
+  </script>
+</head>
+
+<body>
+  <section class="processing">
+    <div class="card">
+      <div class="header">
+        <div class="img"></div>
+        <div class="details">
+          <span class="name"></span>
+          <span class="about"></span>
+        </div>
+      </div>
+      <div class="description">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <div class="btns">
+        <div class="btn btn-1"></div>
+        <div class="btn btn-2"></div>
+      </div>
+    </div>
+    <h2 class="info">Processing Tweets...Please Wait..!</h2>
+  </section>
+  <section class="preparing">
+    <div class="loading"></div>
+    <h2 class="info">Preparing Results...</h2>
+  </section>
+  <section class="results">
+    <p class="text"></p>
+  </section>
+  <script src="result.js"></script>
+</body>
+
+</html>
